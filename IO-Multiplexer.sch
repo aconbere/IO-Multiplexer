@@ -82,23 +82,6 @@ F 9 "TB001-500-04BE" H 7800 3150 50  0001 L CNN "Manufacturer_Part_Number"
 	1    0    0    -1  
 $EndComp
 $Comp
-L SamacSys_Parts:TB001-500-04BE Audio-Board1
-U 1 1 5EEF5EBA
-P 7150 4350
-F 0 "Audio-Board1" H 7778 4246 50  0000 L CNN
-F 1 "Block4" H 7778 4155 50  0000 L CNN
-F 2 "SamacSys:TB00150004BE" H 7800 4450 50  0001 L CNN
-F 3 "https://componentsearchengine.com/Datasheets/1/TB001-500-04BE.pdf" H 7800 4350 50  0001 L CNN
-F 4 "Fixed Terminal Blocks Terminal block, screw type, 5.00, horizontal, 4 poles, CUI Blue, slotted screw, PCB mount" H 7800 4250 50  0001 L CNN "Description"
-F 5 "12.9" H 7800 4150 50  0001 L CNN "Height"
-F 6 "490-TB001-500-04BE" H 7800 4050 50  0001 L CNN "Mouser Part Number"
-F 7 "https://www.mouser.co.uk/ProductDetail/CUI-Devices/TB001-500-04BE?qs=vLWxofP3U2xFd1xqNcHXZA%3D%3D" H 7800 3950 50  0001 L CNN "Mouser Price/Stock"
-F 8 "CUI Devices" H 7800 3850 50  0001 L CNN "Manufacturer_Name"
-F 9 "TB001-500-04BE" H 7800 3750 50  0001 L CNN "Manufacturer_Part_Number"
-	1    7150 4350
-	1    0    0    -1  
-$EndComp
-$Comp
 L SamacSys_Parts:TB001-500-04BE Power-In1
 U 1 1 5EEF6A66
 P 7150 4950
@@ -150,12 +133,8 @@ Text Label 7150 3950 2    50   ~ 0
 Blue
 Text Label 7150 4050 2    50   ~ 0
 Sync
-Text Label 7150 4450 2    50   ~ 0
-SPK+
 Text Label 7150 4350 2    50   ~ 0
 SPK-
-Text Label 7600 4500 2    50   ~ 0
-Audio-GND
 Text Label 7150 4650 2    50   ~ 0
 Audio+
 Text Label 7150 4950 2    50   ~ 0
@@ -181,7 +160,7 @@ P1-Button1
 Text Label 3850 1100 1    50   ~ 0
 P1-Up
 Text Label 3150 2100 3    50   ~ 0
-P1-Button6
+P1-Button5
 Text Label 3250 2100 3    50   ~ 0
 P1-Button4
 Text Label 3350 2100 3    50   ~ 0
@@ -189,7 +168,7 @@ P1-Right
 Text Label 3450 2100 3    50   ~ 0
 +5V
 Text Label 3550 2100 3    50   ~ 0
-P1-Button5
+P1-Button7
 Text Label 3650 2100 3    50   ~ 0
 P1-Button3
 Text Label 3750 2100 3    50   ~ 0
@@ -226,7 +205,7 @@ P2-Button1
 Text Label 3850 3100 1    50   ~ 0
 P2-Up
 Text Label 3150 4100 3    50   ~ 0
-P2-Button6
+P2-Button5
 Text Label 3250 4100 3    50   ~ 0
 P2-Button4
 Text Label 3350 4100 3    50   ~ 0
@@ -234,15 +213,11 @@ P2-Right
 Text Label 3450 4100 3    50   ~ 0
 +5V
 Text Label 3550 4100 3    50   ~ 0
-P2-Button5
+P2-Button7
 Text Label 3650 4100 3    50   ~ 0
 P2-Button3
 Text Label 3750 4100 3    50   ~ 0
 P2-Left
-Text Label 7150 950  2    50   ~ 0
-Service-Switch
-Text Label 7150 1050 2    50   ~ 0
-Tilt-Switch
 Text Label 7150 1150 2    50   ~ 0
 P1-Coin
 Text Label 7150 1250 2    50   ~ 0
@@ -395,7 +370,6 @@ Text Label 5300 1850 2    50   ~ 0
 GND
 Text Label 7150 2650 2    50   ~ 0
 P2-Start
-NoConn ~ 7150 4550
 NoConn ~ 7150 4650
 $Comp
 L SamacSys_Parts:TB001-500-04BE Player1-Kick1
@@ -415,11 +389,11 @@ F 9 "TB001-500-04BE" H 9550 2350 50  0001 L CNN "Manufacturer_Part_Number"
 	1    0    0    -1  
 $EndComp
 Text Label 8900 2950 2    50   ~ 0
-P1-Button4
-Text Label 8900 3050 2    50   ~ 0
 P1-Button5
-Text Label 8900 3150 2    50   ~ 0
+Text Label 8900 3050 2    50   ~ 0
 P1-Button6
+Text Label 8900 3150 2    50   ~ 0
+P1-Button7
 Text Label 8900 3250 2    50   ~ 0
 GND
 $Comp
@@ -440,11 +414,11 @@ F 9 "TB001-500-04BE" H 9550 2950 50  0001 L CNN "Manufacturer_Part_Number"
 	1    0    0    -1  
 $EndComp
 Text Label 8900 3550 2    50   ~ 0
-P2-Button4
-Text Label 8900 3650 2    50   ~ 0
 P2-Button5
-Text Label 8900 3750 2    50   ~ 0
+Text Label 8900 3650 2    50   ~ 0
 P2-Button6
+Text Label 8900 3750 2    50   ~ 0
+P2-Button7
 Text Label 8900 3850 2    50   ~ 0
 GND
 $Comp
@@ -459,8 +433,34 @@ F 3 "~" H 5550 2450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 7150 2350
+NoConn ~ 7150 4550
+Text Label 7150 4450 2    50   ~ 0
+SPK+
+$Comp
+L SamacSys_Parts:TB001-500-04BE Audio-Board1
+U 1 1 5EEF5EBA
+P 7150 4350
+F 0 "Audio-Board1" H 7778 4246 50  0000 L CNN
+F 1 "Block4" H 7778 4155 50  0000 L CNN
+F 2 "SamacSys:TB00150004BE" H 7800 4450 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/TB001-500-04BE.pdf" H 7800 4350 50  0001 L CNN
+F 4 "Fixed Terminal Blocks Terminal block, screw type, 5.00, horizontal, 4 poles, CUI Blue, slotted screw, PCB mount" H 7800 4250 50  0001 L CNN "Description"
+F 5 "12.9" H 7800 4150 50  0001 L CNN "Height"
+F 6 "490-TB001-500-04BE" H 7800 4050 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/CUI-Devices/TB001-500-04BE?qs=vLWxofP3U2xFd1xqNcHXZA%3D%3D" H 7800 3950 50  0001 L CNN "Mouser Price/Stock"
+F 8 "CUI Devices" H 7800 3850 50  0001 L CNN "Manufacturer_Name"
+F 9 "TB001-500-04BE" H 7800 3750 50  0001 L CNN "Manufacturer_Part_Number"
+	1    7150 4350
+	1    0    0    -1  
+$EndComp
 Text Label 7150 2450 2    50   ~ 0
 Test-Switch
-NoConn ~ 3550 3100
-NoConn ~ 3550 1100
+Text Label 7150 1050 2    50   ~ 0
+Tilt-Switch
+Text Label 7150 950  2    50   ~ 0
+Service-Switch
+Text Label 3550 1100 1    50   ~ 0
+P1-Button6
+Text Label 3550 3100 1    50   ~ 0
+P2-Button6
 $EndSCHEMATC
